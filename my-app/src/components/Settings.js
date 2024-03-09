@@ -1,10 +1,6 @@
 import React from 'react';
 import './WelcomePage.css'; // Import the CSS for styling
-import Header from './Header';
-import SideNav from './SideNav';
 import WebFont from 'webfontloader';
-import { Link, useNavigate } from 'react-router-dom';
-import NearYou from './NearYou';
 
 WebFont.load({
     google: {
@@ -14,7 +10,6 @@ WebFont.load({
 
 
 const Settings = () => {
-    const navigate = useNavigate();
     return (
         <div>
             Settings
