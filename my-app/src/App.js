@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import NearMePage from './components/NearMePage';
+import WelcomePage from './components/NearYou';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
