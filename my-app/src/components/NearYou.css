@@ -53,6 +53,10 @@
     background-color: #83d981;
   }
 
+  .viewing{
+    background-color: blue;
+  }
+
   .actions {
     display: flex;
     justify-content: center;
