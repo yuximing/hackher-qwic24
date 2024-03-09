@@ -6,7 +6,7 @@ import FoodSharing from './components/FoodSharing';
 import Settings from "./components/Settings";
 import WelcomePage from './components/WelcomePage';
 import NearMePage from './components/NearMePage';
-import NearMePage from './components/NearYou';
+import NearYou from './components/NearYou';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
