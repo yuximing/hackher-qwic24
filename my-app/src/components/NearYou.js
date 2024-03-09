@@ -2,6 +2,7 @@ import React from 'react';
 import './NearYou.css'; // Import the CSS for styling
 import WebFont from 'webfontloader';
 import { useNavigate } from 'react-router-dom';
+import SideNav from './SideNav';
 
 WebFont.load({
     google: {
@@ -19,6 +20,7 @@ const NearYou = () => {
     const navigate = useNavigate();
     return (
         <div className="NearYou">
+        <SideNav></SideNav>
             <div className='welcome-box'>
                 <div className="title-info">
                     <h2 className="h2-title">Rightovers</h2>

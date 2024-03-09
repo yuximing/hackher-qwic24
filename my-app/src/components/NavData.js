@@ -1,7 +1,8 @@
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import RecyclingIcon from '@mui/icons-material/Recycling';
+import HouseIcon from '@mui/icons-material/House';
 import SettingsIcon from '@mui/icons-material/Settings';
  
 export const NavData = [
@@ -14,14 +15,20 @@ export const NavData = [
     {
         id: 1,
         icon: <TravelExploreIcon/>,
-        text: "Near Me",
-        link: "explore"
+        text: "What's Near Me",
+        link: "NearMePage"
+    },
+    {
+        id: 3,
+        icon: <HouseIcon/>,
+        text: "Food Near You",
+        link: "NearYou"
     },
     {
         id: 2,
-        icon: <BarChartIcon/>,
+        icon: <RecyclingIcon/>,
         text: "Compost",
-        link: "statistics"
+        link: "settings"
     },
     {
         id: 3,
