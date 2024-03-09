@@ -1,6 +1,7 @@
 import React from 'react';
 import './WelcomePage.css'; // Import the CSS for styling
 import Header from './Header';
+import SideNav from './SideNav';
 import WebFont from 'webfontloader';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ const WelcomePage = () => {
     const navigate = useNavigate();
     return (
         <div className="welcomepage">
+            <SideNav></SideNav>
         <Header>
             
         </Header>

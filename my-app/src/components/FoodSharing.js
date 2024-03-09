@@ -1,6 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './WelcomePage.css'; // Import the CSS for styling
+import Header from './Header';
+import SideNav from './SideNav';
+import WebFont from 'webfontloader';
+import { Link, useNavigate } from 'react-router-dom';
 
-const About = () => {
+const FoodSharing = () => {
     const navigate = useNavigate();
     return (
         <div className="Food Sharing">
@@ -17,11 +22,13 @@ const About = () => {
     );
 };
 
-const handleLocationClick = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
-        setLocation('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
-    }, (error) => {
-        console.error('Error getting location: ',error);
-        setLocation('Location not available')
-    });
-};
+// const handleLocationClick = () => {
+//     navigator.geolocation.getCurrentPosition((position) => {
+//         setLocation('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
+//     }, (error) => {
+//         console.error('Error getting location: ',error);
+//         setLocation('Location not available')
+//     });
+// };
+
+export default FoodSharing;
