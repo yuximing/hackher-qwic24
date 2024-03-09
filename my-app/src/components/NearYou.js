@@ -9,8 +9,10 @@ WebFont.load({
     }
 });
 
-function viewLocation() {
-    
+function dododo() {
+    var listContainer = document.getElementById('list-container');
+    listContainer.classList.toggle('viewing');
+        
 }
 
 const NearYou = () => {
@@ -28,7 +30,7 @@ const NearYou = () => {
                     <h3 className='subtitle'>Locations serving food near you:</h3>
                 </div>
                 <ul id='list-container'>
-                    <li onClick={viewLocation()}>Task 1</li>
+                    <li onClick={dododo}>Task 1</li>
                     <li>Task 2</li>
                     <li>Task 3</li>
                 </ul>
