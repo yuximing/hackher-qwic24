@@ -1,5 +1,6 @@
 import React from 'react';
 import './WelcomePage.css'; // Import the CSS for styling
+import Header from './Header';
 import WebFont from 'webfontloader';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,6 +15,9 @@ const WelcomePage = () => {
     const navigate = useNavigate();
     return (
         <div className="welcomepage">
+        <Header>
+            
+        </Header>
             <div className='welcome-box'>
                 <div className="welcome-info">
                     <h2 className="h2-title">Rightovers</h2>
