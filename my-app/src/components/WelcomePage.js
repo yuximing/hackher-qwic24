@@ -21,7 +21,7 @@ const WelcomePage = () => {
             <div className='welcome-box'>
                 <div className="welcome-info">
                     <h2 className="h2-title">Rightovers</h2>
-                    <p className='intro-sentence'>Meal sharing made easy!</p>
+                    <p className='intro-sentence'>Leftovers done right!</p>
                 </div>
             </div>
         </div>
