@@ -4,6 +4,7 @@ import Header from './Header';
 import SideNav from './SideNav';
 import WebFont from 'webfontloader';
 import { Link, useNavigate } from 'react-router-dom';
+import NearYou from './NearYou';
 
 WebFont.load({
     google: {
@@ -25,6 +26,8 @@ const WelcomePage = () => {
                     <h2 className="h2-title">Rightovers</h2>
                     <p className='intro-sentence'>Leftovers done right!</p>
                     <Link to="/NearMePage">what's near me</Link>
+                    <p></p>
+                    <Link to="/NearYou ">find food</Link>
                 </div>
             </div>
         </div>
