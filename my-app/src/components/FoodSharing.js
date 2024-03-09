@@ -3,12 +3,28 @@ import './WelcomePage.css'; // Import the CSS for styling
 import Header from './Header';
 import SideNav from './SideNav';
 import WebFont from 'webfontloader';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const FoodSharing = () => {
     const navigate = useNavigate();
+    const [location, setLocation] = useState('');
+
+    const handleLocationClick = () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            setLocation('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
+        }, (error) => {
+            console.error('Error getting location: ',error);
+            setLocation('Location not available')
+        });
+    };
+
     return (
         <div className="Food Sharing">
+        <div>
+            <button onClick = {handleLocationClick} > Get Location </button>
+            <p>{location}</p>
+        </div>
         <Header>
             
         </Header>
@@ -22,13 +38,6 @@ const FoodSharing = () => {
     );
 };
 
-// const handleLocationClick = () => {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//         setLocation('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
-//     }, (error) => {
-//         console.error('Error getting location: ',error);
-//         setLocation('Location not available')
-//     });
-// };
+
 
 export default FoodSharing;
