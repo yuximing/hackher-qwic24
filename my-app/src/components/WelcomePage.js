@@ -2,7 +2,7 @@ import React from 'react';
 import './WelcomePage.css'; // Import the CSS for styling
 import Header from './Header';
 import WebFont from 'webfontloader';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 WebFont.load({
     google: {
@@ -22,6 +22,7 @@ const WelcomePage = () => {
                 <div className="welcome-info">
                     <h2 className="h2-title">Rightovers</h2>
                     <p className='intro-sentence'>Leftovers done right!</p>
+                    <Link to="/NearMePage">what's near me</Link>
                 </div>
             </div>
         </div>
