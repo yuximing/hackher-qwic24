@@ -28,7 +28,7 @@ const WelcomePage = () => {
     );
 };
 
-/*
+
 const MealOptions = () => {
     const navigate = useNavigate();
     return(
@@ -39,5 +39,5 @@ const MealOptions = () => {
         </div>
     );
 };
-*/
+
 export default WelcomePage;
