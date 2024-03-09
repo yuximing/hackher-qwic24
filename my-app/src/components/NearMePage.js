@@ -6,15 +6,15 @@ import { Icon } from "leaflet";
 const NearMePage = () => {
     const markers = [
         {
-            geocode: [48.86, 2.3522],
+            geocode: [44.2300392, -76.4998722],
             popUp: "Hello, I am pop up 1"
         },
         {
-            geocode: [48.85, 2.3522],
+            geocode: [44.2330713, -76.4994524],
             popUp: "Hello, I am pop up 2"
         },
         {
-            geocode: [48.855, 2.34],
+            geocode: [44.2224191, -76.5023496],
             popUp: "Hello, I am pop up 3"
         }
     ];
@@ -28,8 +28,8 @@ const NearMePage = () => {
     <div className='flex flex-row h-screen w-screen m-auto items-center justify-center'>
       <MapContainer
         className='h-[60vh] w-[60vw] rounded-3xl'
-        center={[48.8566, 2.3522]}
-        zoom={13}
+        center={[44.2258905, -76.4987173]}
+        zoom={15}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
