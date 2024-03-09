@@ -28,14 +28,16 @@ const WelcomePage = () => {
     );
 };
 
+/*
 const MealOptions = () => {
     const navigate = useNavigate();
     return(
         <div className='Find a meal'>
             <div className='Share a meal'>
-                
+
             </div>
         </div>
     );
 };
+*/
 export default WelcomePage;
