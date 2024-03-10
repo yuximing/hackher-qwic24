@@ -2,7 +2,7 @@ import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import RecyclingIcon from '@mui/icons-material/Recycling';
-import HouseIcon from '@mui/icons-material/House';
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
  
 export const NavData = [
@@ -20,20 +20,20 @@ export const NavData = [
     },
     {
         id: 3,
-        icon: <HouseIcon/>,
+        icon: <PersonPinCircleIcon/>,
         text: "Food Near You",
         link: ".././NearYou"
     },
-    {
-        id: 2,
-        icon: <RecyclingIcon/>,
-        text: "Food Banks Near",
-        link: ".././settings"
-    },
-    {
-        id: 3,
-        icon: <SettingsIcon/>,
-        text: "Settings",
-        link: ".././settings"
-    }
+    // {
+    //     id: 2,
+    //     icon: <RecyclingIcon/>,
+    //     text: "Food Banks Near",
+    //     link: ".././settings"
+    // },
+    // {
+    //     id: 3,
+    //     icon: <SettingsIcon/>,
+    //     text: "Settings",
+    //     link: ".././settings"
+    // }
 ]
