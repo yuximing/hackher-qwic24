@@ -3,6 +3,7 @@ import './NearYou.css'; // Import the CSS for styling
 import WebFont from 'webfontloader';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import SideNav from './SideNav';
 
 WebFont.load({
     google: {
@@ -30,6 +31,8 @@ const NearYou = () => {
     const navigate = useNavigate();
     return (
         <div className="NearYou">
+        <SideNav></SideNav>
+        <div>
             <div className='welcome-box'>
                 <div className="title-info">
                     <h2 className="h2-title">Rightovers</h2>
@@ -45,6 +48,8 @@ const NearYou = () => {
                     <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
                 </ul>
             </div>
+
+        </div>
         </div>
     );
 };

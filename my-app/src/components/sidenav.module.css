@@ -1,12 +1,19 @@
-/* sidenav.module.css */
 .sidenav {
     width: 250px;
     transition: width 0.3s ease-in-out;
     height: 100vh;
-    background-color: rgb(10,25,41);
+    background-color: #1FA104;
     padding-top: 28px;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Position at the left of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
 }
- 
+
+.sidenav.open{
+    width: 250px;
+}
+
 .sidenavClosed {
     composes: sidenav;
     transition: width 0.3s ease-in-out;
@@ -18,12 +25,14 @@
     align-items: center;
     padding: 10px 20px;
     cursor: pointer;
-    color: #B2BAC2;
+    color: #ffffff;
     text-decoration: none;
+    transition: 0.3s;
 }
  
 .linkText {
     padding-left: 16px;
+    transition: 0.3s;
 }
  
 .linkTextClosed {
@@ -40,9 +49,10 @@
     align-self: center;
     align-self: flex-start; 
     justify-self: flex-end;
-    color: #B2BAC2;
+    color: #ffffff;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding-left: 20px;
+    transition: 0.3s;
 }

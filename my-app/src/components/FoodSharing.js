@@ -3,12 +3,43 @@ import './WelcomePage.css'; // Import the CSS for styling
 import Header from './Header';
 import SideNav from './SideNav';
 import WebFont from 'webfontloader';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const FoodSharing = () => {
     const navigate = useNavigate();
+    const [location, setLocation] = useState('');
+
+    const handleLocationClick = () => {
+        navigator.geolocation.getCurrentPosition(
+            async(position) => {
+                try{
+                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyBBC4YowgOpQfmb7qM4ZI3EpKZuo8FXRsc`);
+                    const { results } = response.data;
+                    if (results && results.length > 0) {
+                        setLocation(results[0].formatted_address);
+                    } else {
+                        setLocation('Address not found');
+                }
+            } catch (error){
+                console.error('Error geocoding address: ',error);
+                setLocation('Error getting address')
+            }
+        },
+        (error) => {
+            console.error('Error getting location: ', error);
+            setLocation('Location not available');
+            }
+        );
+    };
+
     return (
         <div className="Food Sharing">
+        <div>
+            <button onClick = {handleLocationClick} > Get Location </button>
+            <p>{location}</p>
+        </div>
         <Header>
             
         </Header>
@@ -22,13 +53,6 @@ const FoodSharing = () => {
     );
 };
 
-// const handleLocationClick = () => {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//         setLocation('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
-//     }, (error) => {
-//         console.error('Error getting location: ',error);
-//         setLocation('Location not available')
-//     });
-// };
+
 
 export default FoodSharing;

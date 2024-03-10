@@ -16,8 +16,9 @@ WebFont.load({
 const WelcomePage = () => {
     const navigate = useNavigate();
     return (
-        <div className="welcomepage">
-            <SideNav></SideNav>
+        <div>
+        <SideNav></SideNav>
+            <div className="welcomepage">
         <Header>
             
         </Header>
@@ -30,6 +31,7 @@ const WelcomePage = () => {
                     <Link to="/NearYou ">find food</Link>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

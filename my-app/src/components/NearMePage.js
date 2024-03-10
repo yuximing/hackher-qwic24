@@ -2,6 +2,7 @@ import React from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from "leaflet";
+import SideNav from './SideNav';
 
 const NearMePage = () => {
     const markers = [
@@ -26,6 +27,7 @@ const NearMePage = () => {
 
   return (
     <div className='flex flex-row h-screen w-screen m-auto items-center justify-center'>
+    <SideNav></SideNav>
       <MapContainer
         className='h-[60vh] w-[60vw] rounded-3xl'
         center={[44.2258905, -76.4987173]}
