@@ -92,6 +92,19 @@ const NearYou = () => {
                 </div>
                 <div className='locations'>
                     <div className='header'>
+                    <div className='map'>
+                    <button onClick = {handleLocationClick} 
+                                style={{
+                                    backgroundColor: "#4CAF50",
+                                    color: "white",
+                                    padding: "10px 20px",
+                                    border: "none",
+                                    borderRadius: "5px",
+                                    cursor: "pointer",
+                                    fontSize: "16px",
+                                }}> Click Here So We Can Get Our Location </button>
+                        {location ? <Map loc={location} />:''}
+                    </div>
                     <h3 className='subtitle'>Locations serving food near you:</h3>
                     </div>
                     <ul className='list-container'>
@@ -99,10 +112,7 @@ const NearYou = () => {
                     <ListItem foodItems = {itemsTwo} restaurantName = 'Food Bank 2' address = 'Victoria Park'></ListItem>
                     <ListItem foodItems = {itemsThree} restaurantName = 'Food Bank 3' address = '16 Beverley St.'></ListItem>
                     </ul>
-                    <div className='map'>
-                        <button onClick={handleLocationClick}>get new location</button>
-                        {location ? <Map loc={location} />:''}
-                    </div>
+                    
                 </div> 
                 
             </div>
