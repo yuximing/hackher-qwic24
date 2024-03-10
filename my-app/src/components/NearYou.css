@@ -9,6 +9,10 @@
     height: 100%;
   }
 
+  .welcome-box{
+    background-color: #83d981;
+  }
+
   .title-info {
     padding-top: 0vh;
     padding-bottom: 2vh;

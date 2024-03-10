@@ -29,19 +29,18 @@ const ListItem = ({ foodItems, restaurantName, address }) => {
 }
 
 const NearYou = () => {
-    //const navigate = useNavigate();
     const [location, setLocation] = useState('');
-    const handleLocation = () => {
 
+    const handleLocationClick = () => {
         navigator.geolocation.getCurrentPosition(
             async(position) => {
                 try{
                     const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyBBC4YowgOpQfmb7qM4ZI3EpKZuo8FXRsc`);
                     const { results } = response.data;
                     if (results && results.length > 0) {
-                        setLocation(results);
+                        setLocation(results[0].formatted_address);
                     } else {
-                        setLocation('');
+                        setLocation('Address not found');
                 }
             } catch (error){
                 console.error('Error geocoding address: ',error);
@@ -59,31 +58,29 @@ const NearYou = () => {
 
         <div className="NearYou flex w-[100vw] flex-row">
             <SideNav/>
-            <div className=' w-[100vw]'>
+            <div className='w-[100vw]'>
                 <div className='welcome-box'>
                     <div className="title-info">
                         <h2 className="h2-title">Rightovers</h2>
                         <p className='intro-sentence'>Leftovers done right!</p>
                     </div>
-
-                    <div className='locations'>
-                        <div className='header'>
-                        <h3 className='subtitle'>Locations serving food near you:</h3>
-                        </div>
-                        <ul id='list-container'>
-                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
-                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
-                        </ul>
-                        
-                    </div> 
-                    
-                    <div className='map'>
-                        <button onClick={handleLocation}>Get Current Location</button>
-                        <p>{location}</p>
-                        {location ? <Test centre = {location}/> : '' }
-                    </div>
                 </div>
-
+                <div className='locations'>
+                    <div className='header'>
+                    <h3 className='subtitle'>Locations serving food near you:</h3>
+                    </div>
+                    <ul id='list-container'>
+                    <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                    <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                    </ul>
+                    
+                </div> 
+                
+                <div className='map'>
+                    <button onClick={handleLocationClick}>Get Current Location</button>
+                    <p>{location}</p>
+                    {/*location ? <Test centre = {location}/> : '' */}
+                </div>
             </div>
         </div>
     );
