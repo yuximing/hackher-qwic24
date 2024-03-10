@@ -42,10 +42,7 @@ const FoodSharing = () => {
             <Header />
 
             <div className="Food Sharing">
-            <div>
-                <button onClick = {handleLocationClick} > Get Location </button>
-                <p>{location}</p>
-            </div>
+            
             <Header>
                 
             </Header>
@@ -53,6 +50,10 @@ const FoodSharing = () => {
                     <div className="welcome-info">
                         <h2 className="h2-title">Share Food</h2>
                         <p className='intro-sentence'>Here is where you can share your meal</p>
+                        <div>
+                            <button onClick = {handleLocationClick} > Get Location </button>
+                            <p>{location}</p>
+                        </div>
                     </div>
                 </div>
             </div>
