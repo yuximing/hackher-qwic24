@@ -56,6 +56,7 @@ const NearYou = () => {
     };
 
     return (
+
         <div className="NearYou">
         <SideNav></SideNav>
         <div>
@@ -64,12 +65,18 @@ const NearYou = () => {
                 <div className="title-info">
                     <h2 className="h2-title">Rightovers</h2>
                     <p className='intro-sentence'>Leftovers done right!</p>
+
                 </div>
-            </div>
-            <div className='locations'>
-                <div className='header'>
-                    <h3 className='subtitle'>Locations serving food near you:</h3>
+                <div className='locations'>
+                    <div className='header'>
+                        <h3 className='subtitle'>Locations serving food near you:</h3>
+                    </div>
+                    <ul id='list-container'>
+                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                    </ul>
                 </div>
+
                 <ul id='list-container'>
                     <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
                     <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
@@ -81,6 +88,7 @@ const NearYou = () => {
                         {location ? <Test centre = {location}/> : '' }
                     </div>
                 </div>
+
             </div>
         </div>
     );

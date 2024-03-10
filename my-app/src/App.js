@@ -5,7 +5,7 @@ import Compost from './components/Compost';
 import FoodSharing from './components/FoodSharing';
 import Settings from "./components/Settings";
 import WelcomePage from './components/WelcomePage';
-import NearMePage from './components/NearMePage';
+import NearMe from './components/NearMe';
 import NearYou from './components/NearYou';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +25,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
-          <Route path="/NearMePage" element={<NearMePage />} />
+          <Route path="/NearMePage" element={<NearMe />} />
           <Route path="/NearYou" element={<NearYou />} />
           <Route path="/compost" element={<Compost />} />
           <Route path="/foodsharing" element={<FoodSharing />}/>

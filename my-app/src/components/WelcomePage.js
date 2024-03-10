@@ -16,27 +16,66 @@ WebFont.load({
 
 const WelcomePage = () => {
     const navigate = useNavigate();
+    const handleClickNearYou = () => {
+        navigate('/NearYou'); // Make sure to use the correct path
+      };
+    const handleClickFoodSharing = () => {
+        navigate('/FoodSharing'); // Make sure to use the correct path
+    };
+    const handleClickNearMePage = () => {
+        navigate('/NearMePage'); // Make sure to use the correct path
+    };
     return (
-        <div>
-        <SideNav></SideNav>
-            <div className="welcomepage">
-                
-        <Header>
-            
-        </Header>
-            <div className='welcome-box'>
-                <div className="welcome-info">
-                    <h2 className="h2-title">Rightovers</h2>
-                    <p className='intro-sentence'>Leftovers done right!</p>
-                    <div><center>
-                    <img src={heart_logo} alt="Description of the image" width="35%" height="35%"/>
-                    </center>
-                    </div><br></br><br></br>
-                    <Link to="/NearMePage">what's near me</Link>
+        <div className='flex flex-row w-screen'>
+            <SideNav />
+            <div className="welcomepage w-[100vw]">
+                <Header>
+                    
+                </Header>
+                <div className='welcome-box'>
+                    <div className="welcome-info">
+                        <h2 className="h2-title">Rightovers</h2>
+                        <p className='intro-sentence'>Leftovers done right!</p>
+                        <div><center>
+                        <img src={heart_logo} alt="Description of the image" width="35%" height="35%"/>
+                        </center>
+                        </div><br></br><br></br>
+                    <button onClick={handleClickNearMePage}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> 
+                    what's near me</button>
                     <p></p>
-                    <Link to="/NearYou ">find food</Link>
+                    <button onClick={handleClickNearYou}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> 
+                    Find Food
+                    </button>
                     <p></p>
-                    <Link to="/FoodSharing">find foodbank</Link>
+                    <button onClick={handleClickFoodSharing}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> Find Foodbank
+                    </button>
                 </div>
             </div>
         </div>

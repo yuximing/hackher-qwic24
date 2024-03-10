@@ -4,7 +4,7 @@
     height: 100vh;
     background-color: #1FA104;
     padding-top: 28px;
-    position: fixed; /* Set position to fixed */
+    position: sticky; /* Set position to fixed */
     top: 0; /* Position at the top of the viewport */
     left: 0; /* Position at the left of the viewport */
     overflow-y: auto; /* Enable vertical scrolling if needed */

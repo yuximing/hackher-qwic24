@@ -2,15 +2,14 @@ import React from 'react';
 import './WelcomePage.css'; // Import the CSS for styling
 import Header from './Header';
 import SideNav from './SideNav';
-import WebFont from 'webfontloader';
+
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 
 
 
 const FoodSharing = () => {
-    const navigate = useNavigate();
     const [location, setLocation] = useState('');
 
     const handleLocationClick = () => {
@@ -37,22 +36,37 @@ const FoodSharing = () => {
     };
 
     return (
-        <div>
+        
+        <div className='flex w-[100vw] flex-row'>
             <SideNav />
-            <Header />
+            <div className=' w-[100vw]'>
 
-            <div className="Food Sharing">
-            
-            <Header>
+                <Header />
+
+                <div className="Food Sharing">
                 
-            </Header>
-                <div className='welcome-box'>
-                    <div className="welcome-info">
-                        <h2 className="h2-title">Share Food</h2>
-                        <p className='intro-sentence'>Here is where you can share your meal</p>
-                        <div>
-                            <button onClick = {handleLocationClick} > Get Location </button>
-                            <p>{location}</p>
+                <Header>
+                    
+                </Header>
+                    <div className='welcome-box'>
+                        <div className="welcome-info">
+                            <h2 className="h2-title">Share Food</h2>
+                            <p className='intro-sentence'>Here is where you can share your meal</p>
+                            <div>
+                                <button onClick = {handleLocationClick} 
+                                style={{
+                                    backgroundColor: "#4CAF50",
+                                    color: "white",
+                                    padding: "10px 20px",
+                                    border: "none",
+                                    borderRadius: "5px",
+                                    cursor: "pointer",
+                                    fontSize: "16px",
+                                }}> 
+                                Click Here So We Can Get Our Location 
+                                </button>
+                                <p>{location}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
