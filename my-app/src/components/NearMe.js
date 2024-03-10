@@ -26,10 +26,10 @@ const NearMePage = () => {
     });
 
   return (
-    <div className='flex flex-row h-screen w-screen m-auto items-center justify-center'>
-    <SideNav></SideNav>
+    <div className='flex flex-row h-screen w-screen m-auto'>
+      <SideNav/>
       <MapContainer
-        className='h-[60vh] w-[60vw] rounded-3xl'
+        className='h-[60vh] w-[60vw] rounded-3xl ml-auto my-auto mr-[10vw]'
         center={[44.2258905, -76.4987173]}
         zoom={15}
       >

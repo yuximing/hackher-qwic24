@@ -26,9 +26,9 @@ const WelcomePage = () => {
         navigate('/NearMePage'); // Make sure to use the correct path
     };
     return (
-        <div>
-        <SideNav></SideNav>
-            <div className="welcomepage">
+        <div className='flex flex-row w-screen'>
+            <SideNav />
+            <div className="welcomepage w-[100vw]">
                 <Header>
                     
                 </Header>

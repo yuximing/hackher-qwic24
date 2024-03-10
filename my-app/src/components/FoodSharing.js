@@ -37,34 +37,37 @@ const FoodSharing = () => {
 
     return (
         
-        <div>
+        <div className='flex w-[100vw] flex-row'>
             @babel/plugin-proposal-private-property-in-object
             <SideNav />
-            <Header />
+            <div className=' w-[100vw]'>
 
-            <div className="Food Sharing">
-            
-            <Header>
+                <Header />
+
+                <div className="Food Sharing">
                 
-            </Header>
-                <div className='welcome-box'>
-                    <div className="welcome-info">
-                        <h2 className="h2-title">Share Food</h2>
-                        <p className='intro-sentence'>Here is where you can share your meal</p>
-                        <div>
-                            <button onClick = {handleLocationClick} 
-                            style={{
-                                backgroundColor: "#4CAF50",
-                                color: "white",
-                                padding: "10px 20px",
-                                border: "none",
-                                borderRadius: "5px",
-                                cursor: "pointer",
-                                fontSize: "16px",
-                            }}> 
-                            Click Here So We Can Get Our Location 
-                            </button>
-                            <p>{location}</p>
+                <Header>
+                    
+                </Header>
+                    <div className='welcome-box'>
+                        <div className="welcome-info">
+                            <h2 className="h2-title">Share Food</h2>
+                            <p className='intro-sentence'>Here is where you can share your meal</p>
+                            <div>
+                                <button onClick = {handleLocationClick} 
+                                style={{
+                                    backgroundColor: "#4CAF50",
+                                    color: "white",
+                                    padding: "10px 20px",
+                                    border: "none",
+                                    borderRadius: "5px",
+                                    cursor: "pointer",
+                                    fontSize: "16px",
+                                }}> 
+                                Click Here So We Can Get Our Location 
+                                </button>
+                                <p>{location}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

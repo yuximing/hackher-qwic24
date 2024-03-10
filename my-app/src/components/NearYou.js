@@ -30,26 +30,26 @@ const ListItem = ({ foodItems, restaurantName, address }) => {
 const NearYou = () => {
     const navigate = useNavigate();
     return (
-        <div className="NearYou">
-        <SideNav></SideNav>
-        <div>
-            <div className='welcome-box'>
-                <div className="title-info">
-                    <h2 className="h2-title">Rightovers</h2>
-                    <p className='intro-sentence'>Leftovers done right!</p>
+        <div className="NearYou flex w-[100vw] flex-row">
+            <SideNav/>
+            <div className=' w-[100vw]'>
+                <div className='welcome-box'>
+                    <div className="title-info">
+                        <h2 className="h2-title">Rightovers</h2>
+                        <p className='intro-sentence'>Leftovers done right!</p>
+                    </div>
                 </div>
-            </div>
-            <div className='locations'>
-                <div className='header'>
-                    <h3 className='subtitle'>Locations serving food near you:</h3>
+                <div className='locations'>
+                    <div className='header'>
+                        <h3 className='subtitle'>Locations serving food near you:</h3>
+                    </div>
+                    <ul id='list-container'>
+                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                        <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
+                    </ul>
                 </div>
-                <ul id='list-container'>
-                    <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
-                    <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
-                </ul>
-            </div>
 
-        </div>
+            </div>
         </div>
     );
 };
