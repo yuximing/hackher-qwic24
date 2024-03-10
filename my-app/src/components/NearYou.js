@@ -4,7 +4,8 @@ import WebFont from 'webfontloader';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import SideNav from './SideNav';
-import Test from './test.js';
+import axios from 'axios';
+import Map from './map.js';
 
 WebFont.load({
     google: {
@@ -52,7 +53,32 @@ const NearYou = () => {
     "Chicken Parmesan",
     "Greek Salad",
     "BBQ Ribs",
-    "Margarita Cocktail"]
+        "Margarita Cocktail"]
+    
+        const [location, setLocation] = useState('');
+
+        const handleLocationClick = () => {
+            navigator.geolocation.getCurrentPosition(
+                async(position) => {
+                    try{
+                        const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDaFXK8g-U2IXRiruiarIJtQkJcy4pAVoE`);
+                        const { results } = response.data;
+                        if (results && results.length > 0) {
+                            setLocation([position.coords.latitude, position.coords.longitude]);
+                        } else {
+                            setLocation('Address not found');
+                    }
+                } catch (error){
+                    console.error('Error geocoding address: ',error);
+                    setLocation('Error getting address')
+                }
+            },
+            (error) => {
+                console.error('Error getting location: ', error);
+                setLocation('Location not available');
+                }
+            );
+        };
     return (
         
         <div className="NearYou flex w-[100vw] flex-row">
@@ -74,7 +100,8 @@ const NearYou = () => {
                     <ListItem foodItems = {itemsThree} restaurantName = 'Food Bank 3' address = '16 Beverley St.'></ListItem>
                     </ul>
                     <div className='map'>
-                        <Test />
+                        <button onClick={handleLocationClick}>Get Location</button>
+                        <Map center={location}/>
                     </div>
                 </div> 
                 
