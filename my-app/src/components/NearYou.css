@@ -31,11 +31,11 @@
   }
 
   .header{
-
     text-align:left;
     text-indent: 3em;
     margin: 2em;
     margin-left: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   ul {
@@ -46,6 +46,7 @@
     margin: 5em;
     padding: 20px;
     list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .listContainer {
@@ -54,8 +55,9 @@
 
   .show{
     font-size: 1.5em;
-    border: 20px;
+    border: 0px;
     background-color: #83d981;
+    font-family:Georgia, 'Times New Roman', Times, serif;
   }
 
   .hide{
