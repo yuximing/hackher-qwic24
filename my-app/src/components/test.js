@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from "leaflet";
 
-const Map = ({center}) => {
+const Test = () => {
     const markers = [
         {
             geocode: [44.2300392, -76.4998722],
@@ -28,7 +28,7 @@ const Map = ({center}) => {
     <div className='flex h-screen justify-center'>
       <MapContainer
         className='h-[60vh] w-[60vw] rounded-3xl'
-        center={center}
+        center={[44.2258905, -76.4987173]}
         zoom={15}
       >
         <TileLayer
@@ -45,4 +45,4 @@ const Map = ({center}) => {
   );
 };
 
-export default Map;
+export default Test;

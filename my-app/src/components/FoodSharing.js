@@ -6,7 +6,6 @@ import SideNav from './SideNav';
 import { useState } from 'react';
 
 import axios from 'axios';
-import Map from './map';
 
 
 
@@ -20,7 +19,7 @@ const FoodSharing = () => {
                     const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDaFXK8g-U2IXRiruiarIJtQkJcy4pAVoE`);
                     const { results } = response.data;
                     if (results && results.length > 0) {
-                        setLocation([position.coords.latitude, position.coords.longitude]);
+                        setLocation(results[0].formatted_address);
                     } else {
                         setLocation('Address not found');
                 }
@@ -67,7 +66,6 @@ const FoodSharing = () => {
                                 Click Here So We Can Get Our Location 
                                 </button>
                                 <p>{location}</p>
-                                <Map center={location}/>
                             </div>
                         </div>
                     </div>
