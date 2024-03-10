@@ -16,24 +16,24 @@ export const NavData = [
         id: 1,
         icon: <TravelExploreIcon/>,
         text: "What's Near Me",
-        link: "NearMePage"
+        link: ".././NearMePage"
     },
     {
         id: 3,
         icon: <HouseIcon/>,
         text: "Food Near You",
-        link: "NearYou"
+        link: ".././NearYou"
     },
     {
         id: 2,
         icon: <RecyclingIcon/>,
-        text: "Compost",
-        link: "settings"
+        text: "Food Banks Near",
+        link: ".././settings"
     },
     {
         id: 3,
         icon: <SettingsIcon/>,
         text: "Settings",
-        link: "settings"
+        link: ".././settings"
     }
 ]

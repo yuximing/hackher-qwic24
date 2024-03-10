@@ -38,6 +38,7 @@
 .linkTextClosed {
     composes: linkText;
     visibility: hidden;
+    transition: width 0.3s ease-in-out;
 }
  
 .sideitem:hover {
@@ -55,4 +56,14 @@
     cursor: pointer;
     padding-left: 20px;
     transition: 0.3s;
+}
+
+
+.content {
+    margin-left: 250px; /* Initial margin for content */
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition */
+}
+
+.sidenav.closed + .content {
+    margin-left: 60px; /* Adjusted margin when the sidebar is closed */
 }
