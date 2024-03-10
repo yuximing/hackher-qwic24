@@ -16,6 +16,15 @@ WebFont.load({
 
 const WelcomePage = () => {
     const navigate = useNavigate();
+    const handleClickNearYou = () => {
+        navigate('/NearYou'); // Make sure to use the correct path
+      };
+    const handleClickFoodSharing = () => {
+        navigate('/FoodSharing'); // Make sure to use the correct path
+    };
+    const handleClickNearMePage = () => {
+        navigate('/NearMePage'); // Make sure to use the correct path
+    };
     return (
         <div>
         <SideNav></SideNav>
@@ -31,14 +40,45 @@ const WelcomePage = () => {
                         <img src={heart_logo} alt="Description of the image" width="35%" height="35%"/>
                         </center>
                         </div><br></br><br></br>
-                        <Link to="/NearMePage">what's near me</Link>
-                        <p></p>
-                        <Link to="/NearYou ">find food</Link>
-                        <p></p>
-                        <Link to="/FoodSharing">find foodbank</Link>
-                    </div>
+                    <button onClick={handleClickNearMePage}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> 
+                    what's near me</button>
+                    <p></p>
+                    <button onClick={handleClickNearYou}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> 
+                    Find Food
+                    </button>
+                    <p></p>
+                    <button onClick={handleClickFoodSharing}
+                    style={{
+                        backgroundColor: "#4CAF50",
+                        color: "white",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontSize: "16px",
+                    }}> Find Foodbank
+                    </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
