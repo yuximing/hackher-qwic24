@@ -1,6 +1,6 @@
 import React from 'react';
 import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import { Icon } from "leaflet";
 
 const Map = ({loc}) => {
@@ -23,6 +23,12 @@ const Map = ({loc}) => {
         iconUrl: require("./../icons/pin.png"),
         iconSize: [38, 38] // size of the icon
     });
+  
+    
+    const youIcon = new Icon({
+      iconUrl: require("./../icons/929426.png"),
+      iconSize: [38, 38] // size of the icon
+    });
 
   return (
     <div className='flex h-screen justify-center'>
@@ -40,6 +46,9 @@ const Map = ({loc}) => {
             <Popup>{marker.popUp}</Popup>
           </Marker>
         ))}
+        <Marker position={loc} icon={youIcon}>
+            <Popup>Your location</Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
