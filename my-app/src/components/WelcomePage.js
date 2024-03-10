@@ -9,7 +9,8 @@ import heart_logo from '../assets/images/heart_logo.png';
 
 WebFont.load({
     google: {
-        families: ['Pacifico:400']
+        families: ['Dekko:400']
+        
     }
 });
 
