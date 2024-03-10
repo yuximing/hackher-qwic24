@@ -21,6 +21,7 @@ const NearYou = () => {
     return (
         <div className="NearYou">
         <SideNav></SideNav>
+        <div>
             <div className='welcome-box'>
                 <div className="title-info">
                     <h2 className="h2-title">Rightovers</h2>
@@ -37,6 +38,8 @@ const NearYou = () => {
                     <li>Task 3</li>
                 </ul>
             </div>
+
+        </div>
         </div>
     );
 };

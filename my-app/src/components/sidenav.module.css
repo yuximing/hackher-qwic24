@@ -9,7 +9,11 @@
     left: 0; /* Position at the left of the viewport */
     overflow-y: auto; /* Enable vertical scrolling if needed */
 }
- 
+
+.sidenav.open{
+    width: 250px;
+}
+
 .sidenavClosed {
     composes: sidenav;
     transition: width 0.3s ease-in-out;
@@ -23,10 +27,12 @@
     cursor: pointer;
     color: #ffffff;
     text-decoration: none;
+    transition: 0.3s;
 }
  
 .linkText {
     padding-left: 16px;
+    transition: 0.3s;
 }
  
 .linkTextClosed {
@@ -48,4 +54,5 @@
     border: none;
     cursor: pointer;
     padding-left: 20px;
+    transition: 0.3s;
 }
