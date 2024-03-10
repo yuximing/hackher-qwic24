@@ -16,7 +16,7 @@ const FoodSharing = () => {
         navigator.geolocation.getCurrentPosition(
             async(position) => {
                 try{
-                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyBBC4YowgOpQfmb7qM4ZI3EpKZuo8FXRsc`);
+                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDaFXK8g-U2IXRiruiarIJtQkJcy4pAVoE`);
                     const { results } = response.data;
                     if (results && results.length > 0) {
                         setLocation(results[0].formatted_address);
