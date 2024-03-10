@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 const FoodSharing = () => {
     const navigate = useNavigate();
     const [location, setLocation] = useState('');
@@ -35,18 +37,23 @@ const FoodSharing = () => {
     };
 
     return (
-        <div className="Food Sharing">
         <div>
-            <button onClick = {handleLocationClick} > Get Location </button>
-            <p>{location}</p>
-        </div>
-        <Header>
-            
-        </Header>
-            <div className='welcome-box'>
-                <div className="welcome-info">
-                    <h2 className="h2-title">Share Food</h2>
-                    <p className='intro-sentence'>Here is where you can share your meal</p>
+            <SideNav />
+            <Header />
+
+            <div className="Food Sharing">
+            <div>
+                <button onClick = {handleLocationClick} > Get Location </button>
+                <p>{location}</p>
+            </div>
+            <Header>
+                
+            </Header>
+                <div className='welcome-box'>
+                    <div className="welcome-info">
+                        <h2 className="h2-title">Share Food</h2>
+                        <p className='intro-sentence'>Here is where you can share your meal</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@ const WelcomePage = () => {
         <div>
         <SideNav></SideNav>
             <div className="welcomepage">
+                
         <Header>
             
         </Header>
@@ -29,6 +30,8 @@ const WelcomePage = () => {
                     <Link to="/NearMePage">what's near me</Link>
                     <p></p>
                     <Link to="/NearYou ">find food</Link>
+                    <p></p>
+                    <Link to="/FoodSharing">find foodbank</Link>
                 </div>
             </div>
         </div>
