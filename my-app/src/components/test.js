@@ -3,19 +3,19 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from "leaflet";
 
-const Test = ({centre}) => {
+const Test = () => {
     const markers = [
         {
             geocode: [44.2300392, -76.4998722],
-            popUp: "Hello, I am pop up 1"
+            popUp: "Food Bank 1"
         },
         {
             geocode: [44.2330713, -76.4994524],
-            popUp: "Hello, I am pop up 2"
+            popUp: "Food Bank 2"
         },
         {
             geocode: [44.2224191, -76.5023496],
-            popUp: "Hello, I am pop up 3"
+            popUp: "Food Bank 3"
         }
     ];
 
@@ -25,10 +25,10 @@ const Test = ({centre}) => {
     });
 
   return (
-    <div className='flex flex-row h-screen w-screen m-auto items-center justify-center'>
+    <div className='flex h-screen justify-center'>
       <MapContainer
         className='h-[60vh] w-[60vw] rounded-3xl'
-        center={centre}
+        center={[44.2258905, -76.4987173]}
         zoom={15}
       >
         <TileLayer

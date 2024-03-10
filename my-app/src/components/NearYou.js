@@ -4,7 +4,6 @@ import WebFont from 'webfontloader';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import SideNav from './SideNav';
-import axios from 'axios';
 import Test from './test.js';
 
 WebFont.load({
@@ -12,8 +11,6 @@ WebFont.load({
         families: ['Pacifico:400']
     }
 });
-
-//const navigate = useNavigate();
 
 const ListItem = ({ foodItems, restaurantName, address }) => {
     const [visible, setVisible] = useState(false)
@@ -29,36 +26,12 @@ const ListItem = ({ foodItems, restaurantName, address }) => {
 }
 
 const NearYou = () => {
-    const [location, setLocation] = useState('');
-
-    const handleLocationClick = () => {
-        navigator.geolocation.getCurrentPosition(
-            async(position) => {
-                try{
-                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDaFXK8g-U2IXRiruiarIJtQkJcy4pAVoE`);
-                    const { results } = response.data;
-                    if (results && results.length > 0) {
-                        setLocation(results[0].formatted_address);
-                    } else {
-                        setLocation([44.2258905, -76.4987173]);
-                }
-            } catch (error){
-                console.error('Error geocoding address: ',error);
-                setLocation('Error getting address')
-            }
-        },
-        (error) => {
-            console.error('Error getting location: ', error);
-            setLocation('Location not available');
-            }
-        );
-    };
-
+    
     return (
-
+        
         <div className="NearYou flex w-[100vw] flex-row">
             <SideNav/>
-            <div className='w-[100vw]'>
+            <div className='w-[90vw]'>
                 <div className='welcome-box'>
                     <div className="title-info">
                         <h2 className="h2-title">Rightovers</h2>
@@ -69,18 +42,15 @@ const NearYou = () => {
                     <div className='header'>
                     <h3 className='subtitle'>Locations serving food near you:</h3>
                     </div>
-                    <ul id='list-container'>
+                    <ul className='list-container'>
                     <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
                     <ListItem foodItems = {['apple', 'banana']} restaurantName = 'McDs' address = '1234 princess st.'></ListItem>
                     </ul>
-                    
+                    <div className='map'>
+                        <Test />
+                    </div>
                 </div> 
                 
-                <div className='map'>
-                    <button onClick={handleLocationClick}>Get Current Location</button>
-                    <p>{location}</p>
-                    {location ? <Test centre = {location}/> : '' }
-                </div>
             </div>
         </div>
     );

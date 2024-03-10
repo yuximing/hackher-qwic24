@@ -9,10 +9,6 @@
     height: 100%;
   }
 
-  .welcome-box{
-    background-color: #83d981;
-  }
-
   .title-info {
     padding-top: 0vh;
     padding-bottom: 2vh;
@@ -34,9 +30,6 @@
     font-size: 23px;
   }
 
-  .locations{
-    min-height: 80vh;
-  }
   .header{
 
     text-align:left;
@@ -55,10 +48,14 @@
     list-style: none;
   }
 
+  .listContainer {
+    background-color: white;
+  }
+
   .show{
     font-size: 1.5em;
     border: 20px;
-    background-color: aquamarine;
+    background-color: #83d981;
   }
 
   .hide{
@@ -71,10 +68,10 @@
   }
 
   .listElementActive{
-    background-color: aquamarine;
+    background-color: #83d981;
     
   }
-  
+
   .actions {
     display: flex;
     justify-content: center;
