@@ -38,7 +38,6 @@ const FoodSharing = () => {
     return (
         
         <div className='flex w-[100vw] flex-row'>
-            @babel/plugin-proposal-private-property-in-object
             <SideNav />
             <div className=' w-[100vw]'>
 
