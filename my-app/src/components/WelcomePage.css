@@ -1,8 +1,11 @@
+div {
+  background-color: #D9FFE3;
+}
+
 .welcomepage {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    padding: 10px 0;
     box-sizing: border-box;
     background-color: #D9FFE3;
   }

@@ -20,26 +20,25 @@ const WelcomePage = () => {
         <div>
         <SideNav></SideNav>
             <div className="welcomepage">
-                
-        <Header>
-            
-        </Header>
-            <div className='welcome-box'>
-                <div className="welcome-info">
-                    <h2 className="h2-title">Rightovers</h2>
-                    <p className='intro-sentence'>Leftovers done right!</p>
-                    <div><center>
-                    <img src={heart_logo} alt="Description of the image" width="35%" height="35%"/>
-                    </center>
-                    </div><br></br><br></br>
-                    <Link to="/NearMePage">what's near me</Link>
-                    <p></p>
-                    <Link to="/NearYou ">find food</Link>
-                    <p></p>
-                    <Link to="/FoodSharing">find foodbank</Link>
+                <Header>
+                    
+                </Header>
+                <div className='welcome-box'>
+                    <div className="welcome-info">
+                        <h2 className="h2-title">Rightovers</h2>
+                        <p className='intro-sentence'>Leftovers done right!</p>
+                        <div><center>
+                        <img src={heart_logo} alt="Description of the image" width="35%" height="35%"/>
+                        </center>
+                        </div><br></br><br></br>
+                        <Link to="/NearMePage">what's near me</Link>
+                        <p></p>
+                        <Link to="/NearYou ">find food</Link>
+                        <p></p>
+                        <Link to="/FoodSharing">find foodbank</Link>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     );
 };
