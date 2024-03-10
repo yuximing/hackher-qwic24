@@ -35,12 +35,12 @@ const NearYou = () => {
         navigator.geolocation.getCurrentPosition(
             async(position) => {
                 try{
-                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyBBC4YowgOpQfmb7qM4ZI3EpKZuo8FXRsc`);
+                    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDaFXK8g-U2IXRiruiarIJtQkJcy4pAVoE`);
                     const { results } = response.data;
                     if (results && results.length > 0) {
                         setLocation(results[0].formatted_address);
                     } else {
-                        setLocation('Address not found');
+                        setLocation([44.2258905, -76.4987173]);
                 }
             } catch (error){
                 console.error('Error geocoding address: ',error);
@@ -79,7 +79,7 @@ const NearYou = () => {
                 <div className='map'>
                     <button onClick={handleLocationClick}>Get Current Location</button>
                     <p>{location}</p>
-                    {/*location ? <Test centre = {location}/> : '' */}
+                    {location ? <Test centre = {location}/> : '' }
                 </div>
             </div>
         </div>
